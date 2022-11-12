@@ -1,0 +1,43 @@
+.navBar {
+    min-width: 800px;
+    grid-column-start: 3;
+    grid-column-end: 11;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+    padding: 40px;
+    font-size: 15px;
+    font-weight: var(--text-regular);
+    position: relative;
+}
+
+.navBar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+}
+
+.navBar a {
+    text-decoration: none;
+    color: var(--link-color);
+}
+
+.navBar .logo {
+    display: block;
+    height: 78px;
+    object-fit: cover;
+    object-position: center;
+    padding: 10px 30px;
+}
+
+.navBar .nav_social {
+    justify-self: end;
+}
+
+.navBar .nav_social img {
+    display: block;
+    height: 30px;
+    object-fit: cover;
+}
