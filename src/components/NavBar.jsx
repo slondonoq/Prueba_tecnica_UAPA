@@ -3,10 +3,27 @@ import logo from '../imgs/logo.svg';
 import twitter from '../imgs/twitter.svg';
 import facebook from '../imgs/facebook.svg';
 import linkedIn from '../imgs/linkedIn.svg';
+import menu from '../imgs/menu.svg';
+import close from '../imgs/close.svg';
 
 const NavBar = () => {
+
+    const openMenu = () => {
+        let nav = document.getElementById('nav');
+        let background = document.getElementById('navMenuMobile_background');
+        nav.classList.add('show');
+        background.classList.add('show');
+    }
+
+    const closeMenu = () => {
+        let nav = document.getElementById('nav');
+        let background = document.getElementById('navMenuMobile_background');
+        nav.classList.remove('show');
+        background.classList.remove('show');
+    }
+
     return(
-        <nav className="navBar">
+        <nav className="navBar" id="nav">
             <ul className="nav_links">
                 <li>
                     <a href='/#'>Home</a>
@@ -42,6 +59,12 @@ const NavBar = () => {
                     </a>
                 </li>
             </ul>
+            <button aria-label="Menu" className="menu" onClick={openMenu}>
+                <img alt="Menu" src={menu}/>
+            </button>
+            <button aria-label="Close" className="menu_close" onClick={closeMenu}>
+                <img alt="Close" src={close}/>
+            </button>
         </nav>
     );
 }

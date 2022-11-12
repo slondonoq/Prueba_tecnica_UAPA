@@ -1,0 +1,14 @@
+.button{
+    border: none;
+    padding: 16px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.button.default {
+    background-color: var(--default-btn-color);
+    border-radius: 35px;
+    color: var(--default-btn-text-color);
+    font-size: var(--default-btn-text-size);
+    font-weight: var(--text-regular);
+}

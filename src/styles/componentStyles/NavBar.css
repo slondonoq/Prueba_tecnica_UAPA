@@ -1,5 +1,5 @@
 .navBar {
-    min-width: 800px;
+    height: 100%;
     grid-column-start: 3;
     grid-column-end: 11;
     display: grid;
@@ -10,6 +10,7 @@
     font-size: 15px;
     font-weight: var(--text-regular);
     position: relative;
+    z-index: 1;
 }
 
 .navBar ul {
@@ -17,6 +18,7 @@
     display: flex;
     gap: 20px;
     padding: 0;
+    grid-row-start: 1;
 }
 
 .navBar a {
@@ -30,6 +32,8 @@
     object-fit: cover;
     object-position: center;
     padding: 10px 30px;
+    grid-column-start: 2;
+    grid-row-start: 1;
 }
 
 .navBar .nav_social {
@@ -40,4 +44,133 @@
     display: block;
     height: 30px;
     object-fit: cover;
+}
+
+.navBar .menu, .navBar .menu_close {
+    visibility: hidden;
+    background-color: transparent;
+    border: none;
+    width: 40px;
+    grid-row-start: 1;
+    grid-column-start: 2;
+    justify-self: end;
+}
+
+/* For responsive menu */
+#navMenuMobile_background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 2;
+    transform: translateX(100%);
+    transition: transform .3s; 
+}
+
+@media screen and (max-width: 1439px) {
+    .navBar {
+        grid-column-start: 2;
+        grid-column-end: 12;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .navBar {
+        grid-column-start: 1;
+        grid-column-end: 9;
+        grid-template-columns: 1fr 40px;
+        padding: 16px;
+    }
+    
+    .navBar .menu {
+        visibility: visible;
+    }
+
+    .navBar ul {
+        display: flex;
+        flex-flow: column;
+        gap: 40px;
+        align-items: center;
+        transform: translateX(200%);
+        transition: transform .3s;
+        height: 0px;
+        width: 0px;
+        overflow: hidden;
+    }
+
+    .navBar .logo {
+        justify-self: start;
+        padding: 10px;
+        grid-row-start: 1;
+        grid-column-start: 1;
+    }
+
+    /* For responsive menu */
+    #navMenuMobile_background.show {
+        display: block;
+        transform: translateX(0);
+    }
+
+    .navBar.show {
+        position: absolute;
+        top: 0;
+        width: 768px;
+        margin: 0 auto;
+        z-index: 3;
+        grid-template-rows: 80px 1fr 1fr;
+    }
+
+    .navBar.show .menu {
+        visibility: hidden;
+    }
+
+    .navBar.show .menu_close {
+        visibility: visible;
+    }
+
+    .navBar.show ul {
+        width: 100%;
+        grid-column-start: 1;
+        grid-row-start: 2;
+        height: max-content;
+        transform: translateX(0);
+    }
+
+    .navBar.show ul a {
+        font-size: 20px;
+    }
+
+    .navBar.show ul img {
+        height: 40px
+    }
+
+    .navBar.show .nav_social {
+        align-self: baseline;
+        grid-row-start: 3;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .navBar {
+        grid-column-start: 1;
+        grid-column-end: 5;
+    }
+
+    .navBar.show {
+        width: 425px;
+    }
+}
+
+@media screen and (max-width: 424px) {
+    .navBar.show {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 349px) {
+    .navBar.show {
+        width: 320px;
+    }
 }
