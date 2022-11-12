@@ -11,6 +11,7 @@
     font-weight: var(--text-regular);
     position: relative;
     z-index: 1;
+    max-height: 100vh;
 }
 
 .navBar ul {

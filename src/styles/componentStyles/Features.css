@@ -1,0 +1,204 @@
+ .features {
+    grid-template-rows: repeat(3, minmax(180px, auto));
+    row-gap: 80px;
+    text-align: center;
+}
+
+.features .heading {
+    grid-row-start: 1;
+    grid-column-start: 4;
+    grid-column-end: 10;
+}
+
+.features .heading h2 {
+    font-size: 48px;
+    font-weight: var(--text-regular);
+    color: var(--text-heading-color);
+}
+
+.features .heading h4 {
+    font-size: 28px;
+    font-weight: var(--text-regular);
+    color: var(--text-color);
+}
+
+.features .feature_container {
+    grid-row-start: 2;
+    grid-column-start: 3;
+    grid-column-end: 11;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+
+.features .feature {
+    width: 255px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.features .feature img {
+    width: 61px;
+}
+
+.features .feature h3 {
+    font-size: 20px;
+    font-weight: var(--text-bold);
+    color: var(--text-heading-color);
+}
+
+.features .feature p {
+    font-size: 18px;
+    font-weight: var(--text-regular);
+    color: var(--text-color);
+}
+
+.features .video_container {
+    position: relative;
+    grid-row-start: 3;
+    grid-column-start: 2;
+    grid-column-end: 12;
+    background-color: #d6d4d0;
+    background-image: url('../../imgs/video1.png');
+    height: 660px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 80px;
+    box-shadow: 0 8px 63px 0 rgba(0, 0, 0, 0.15);
+}
+
+.features .video_container .button {
+    position: absolute;
+    top: calc(50% - 94px);
+    left: calc(50% - 94px);
+}
+
+@media screen and (max-width: 1439px) {
+    .features .heading {
+        grid-column-start: 3;
+        grid-column-end: 11;
+    }
+
+    .features .feature_container {
+        grid-column-start: 2;
+        grid-column-end: 12;
+        padding: 0 40px;
+    }
+
+    .features .feature {
+        width: 220px;
+    }
+
+    .features .video_container {
+        height: 490px;
+    }
+
+    .features .video_container .button {
+        height: 100px;
+        width: 100px;
+        top: calc(50% - 50px);
+        left: calc(50% - 50px);
+    }
+
+    .features .video_container .button img {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .features .heading {
+        grid-column-start: 2;
+        grid-column-end: 8;
+    }
+
+    .features .feature_container {
+        grid-column-start: 1;
+        grid-column-end: 9;
+    }
+
+    .features .feature {
+        width: 200px;
+    }
+
+    .features .video_container {
+        grid-column-start: 1;
+        grid-column-end: 9;
+        height: 382px;
+        border-radius: 40px;
+        margin: 0 40px;
+    }
+
+    .features .video_container .button {
+        height: 80px;
+        width: 80px;
+        top: calc(50% - 40px);
+        left: calc(50% - 40px);
+    }
+
+    .features .video_container .button img {
+        height: 25px;
+        width: 25px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .features .heading {
+        grid-column-start: 1;
+        grid-column-end: 9;
+    }
+
+    .features .feature_container {
+        flex-direction: column;
+        align-items: center;
+        gap: 75px;
+    }
+
+    .features .feature {
+        width: 255px;
+    }
+
+    .features .video_container {
+        height: 332px;
+        border-radius: 40px;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .features .heading {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        width: 285px;
+        margin: 0 auto;
+    }
+
+    .features .feature_container {
+        grid-row-start: 3;
+        grid-column-start: 1;
+        grid-column-end: 5;
+    }
+
+    .features .video_container {
+        border-radius: 16px;
+        grid-row-start: 2;
+        grid-column-start: 1;
+        grid-column-end: 5;
+        height: 222px;
+        margin: 0 20px;
+        background-image: url('../../imgs//video2.png');
+    }
+
+    .features .video_container .button {
+        height: 60px;
+        width: 60px;
+        top: calc(50% - 30px);
+        left: calc(50% - 30px);
+    }
+
+    .features .video_container .button img {
+        height: 15px;
+        width: 15px;
+    }
+}

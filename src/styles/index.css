@@ -21,6 +21,8 @@ code {
   --text-bold: 700;
   --link-color: #fff;
   --cta-text-color: #fff;
+  --text-heading-color: #252B42;
+  --text-color: #374754;
   --default-btn-color: #2091F9;
   --default-btn-text-color: #fff;
   --default-btn-text-size: 20px;
@@ -49,6 +51,7 @@ code {
 }
 
 @media screen and (max-width: 1023px) {
+
   .container {
     width: 768px;
     grid-template-columns: repeat(8, 1fr);
@@ -80,5 +83,19 @@ code {
   .container {
     width: 320px;
     grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* giving space for chrome scrollbar */
+@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-width: 1024px){
+  .App {
+    width: calc(100vw - 17px);
+  }
+}
+
+/* for firefox the space is not needed*/
+@-moz-document url-prefix() {
+  .App {
+    width: 100vw;
   }
 }

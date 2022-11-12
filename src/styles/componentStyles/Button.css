@@ -12,3 +12,16 @@
     font-size: var(--default-btn-text-size);
     font-weight: var(--text-regular);
 }
+
+.button.video {
+    width: 188px;
+    height: 188px;
+    border-radius: 50%;
+    background-color: var(--default-btn-color);
+}
+
+.button.video img{
+    width: 46px;
+    height: 46px;
+    margin: auto;
+}
