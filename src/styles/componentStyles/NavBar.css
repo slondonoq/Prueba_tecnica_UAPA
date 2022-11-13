@@ -115,7 +115,7 @@
     }
 
     .navBar.show {
-        position: absolute;
+        position: fixed;
         top: 0;
         width: 768px;
         margin: 0 auto;

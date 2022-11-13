@@ -1,4 +1,5 @@
  .features {
+    margin-top: 80px;
     grid-template-rows: repeat(3, minmax(180px, auto));
     row-gap: 80px;
     text-align: center;
@@ -40,7 +41,7 @@
 }
 
 .features .feature img {
-    width: 61px;
+    height: 61px;
 }
 
 .features .feature h3 {
@@ -67,6 +68,8 @@
     object-position: center;
     border-radius: 80px;
     box-shadow: 0 8px 63px 0 rgba(0, 0, 0, 0.15);
+
+    margin: 52px 0;
 }
 
 .features .video_container .button {
@@ -92,7 +95,7 @@
     }
 
     .features .video_container {
-        height: 490px;
+        height: 476px;
     }
 
     .features .video_container .button {
@@ -126,9 +129,9 @@
     .features .video_container {
         grid-column-start: 1;
         grid-column-end: 9;
-        height: 382px;
+        height: 385px;
         border-radius: 40px;
-        margin: 0 40px;
+        margin: 52px 40px;
     }
 
     .features .video_container .button {
@@ -161,7 +164,7 @@
     }
 
     .features .video_container {
-        height: 332px;
+        height: 290px;
         border-radius: 40px;
     }
 }

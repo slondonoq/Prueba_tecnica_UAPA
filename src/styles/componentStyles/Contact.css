@@ -1,0 +1,242 @@
+.contact {
+    padding: 52px;
+    grid-template-rows: repeat(2, auto);
+    row-gap: 50px;
+}
+
+.contact .heading {
+    grid-column-start: 4;
+    grid-column-end: 10;
+    margin: 0 60px;
+    text-align: center;
+}
+
+.contact .heading h2 {
+    color: var(--text-heading-color);
+    font-size: 48px;
+    font-weight: var(--text-regular);
+    padding: 10px;
+    margin-top: 150px;
+    margin-bottom: 0px;
+}
+
+.contact .heading h4 {
+    color: var(--text-color);
+    font-size: 28px;
+    font-weight: var(--text-regular);
+    padding: 10px;
+    margin: 0;
+}
+
+.contact .signup_form {
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    margin: 0 95px;
+    display: grid;
+    grid-template-rows: repeat(5, auto);
+    gap: 45px;
+    justify-items: center;
+    align-items: center;
+    padding: 52px 50px;
+    box-shadow: 0 13px 19px 0 rgba(0, 0, 0, 0.07);
+    border: 1px solid #DDDDDD;
+    border-radius: 20px;
+}
+
+.contact .signup_form h3{
+    margin: 0;
+}
+
+.contact .signup_form input, 
+.contact .signup_form textarea {
+    width: 100%;
+    border: 1px solid #E8E8E8;
+    font-family: 'Graphik';
+    background-color: #F5F5F5;
+}
+
+.contact .signup_form input {
+    border-radius: 39px;
+    padding: 19px 20px;
+}
+
+.contact .signup_form textarea {
+    padding: 23px 20px;
+    height: 193px;
+    resize: none;
+}
+
+.contact .signup_form .button {
+    justify-self: start;
+}
+
+.contact .details {
+    grid-row-start: 2;
+    grid-column-start: 6;
+    grid-column-end: 13;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-right: 62px;
+}
+
+.contact .info {
+    display: flex;
+    gap: 15px;
+}
+
+.contact .data {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 310px;
+    padding: 10px;
+}
+
+.contact .data img{
+    height: 32px;
+}
+
+.contact .mapouter {
+    width: 516px;
+    height: 344px;
+    margin: 0 auto;
+}
+
+.contact .mapouter iframe {
+    width: 516px;
+    height: 344px;
+}
+
+.contact .social {
+    display: flex;
+    gap: 24px;
+    padding: 10px;
+}
+
+.contact .social img {
+    height: 41px;
+    width: 41px;
+}
+
+@media screen and (max-width: 1439px) {
+    .contact .heading {
+        grid-column-start: 2;
+        grid-column-end: 12;
+    }
+
+    .contact .signup_form{
+        margin: 0 20px;
+    }
+
+    .contact .mapouter {
+        width: 420px;
+        height: 344px;
+    }
+
+    .contact .mapouter iframe {
+        width: 420px;
+        height: 344px;
+    }
+
+    .contact .details {
+        margin-left: 20px;
+        margin-right: 0;
+    }
+
+    .contact .data:first-child {
+        max-width: 145px !important;
+    }
+    
+    .contact.info {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .contact {
+        grid-template-rows: repeat(3, auto);
+    }
+
+    .contact .heading {
+        grid-column-start: 1;
+        grid-column-end: 9;
+        margin: 0 20px;
+    }
+
+    .contact .mapouter {
+        display: none;
+    }
+
+    .contact .signup_form {
+        grid-row-start: 3;
+        grid-column-start: 2;
+        grid-column-end: 8;
+        margin: 0 40px
+    }
+
+    .contact .details {
+        grid-column-start: 1;
+        grid-column-end: 9;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin: 0;
+    }
+
+    .contact .info {
+        flex-direction: column;
+    }
+
+    .contact .data {
+        flex-direction: row;
+    }
+
+    .contact .data:first-child {
+        max-width: 100% !important;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .contact .heading h4{
+        max-height: 70px;
+        max-width: 300px;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+    .contact .signup_form {
+        grid-column-start: 1;
+        grid-column-end: 9;
+        margin: 0 40px
+    }
+}
+
+@media screen and (max-width: 559px) {
+    .contact {
+        padding: 52px 30px;
+    }
+
+    .contact .heading {
+        grid-column-start: 1;
+        grid-column-end: 5;
+    }
+
+    .contact .details {
+        grid-column-start: 1;
+        grid-column-end: 5;
+    }
+
+    .contact .signup_form {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        margin: 0 5px;
+        padding: 52px 40px;
+    }
+}
+
+@media screen and (max-width: 424px) {
+    .contact {
+        padding: 52px 10px;
+    }
+}
