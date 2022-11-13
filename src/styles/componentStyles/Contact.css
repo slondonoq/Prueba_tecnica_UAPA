@@ -54,11 +54,23 @@
     border: 1px solid #E8E8E8;
     font-family: 'Graphik';
     background-color: #F5F5F5;
+    transition: outline .3s;
+    outline: 2px solid transparent;
 }
 
 .contact .signup_form input {
     border-radius: 39px;
     padding: 19px 20px;
+}
+
+.contact .signup_form input:hover,
+.contact .signup_form textarea:hover {
+    outline: 2px solid var(--default-input-hover);
+}
+
+.contact .signup_form input:focus,
+.contact .signup_form textarea:focus {
+    outline: 2px solid var(--default-input-focus);
 }
 
 .contact .signup_form textarea {

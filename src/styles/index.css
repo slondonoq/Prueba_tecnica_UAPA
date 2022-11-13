@@ -27,6 +27,8 @@ code {
   --default-btn-text-color: #fff;
   --default-btn-text-size: 20px;
   --default-btn-hover: #1c7dd7;
+  --default-input-hover: #9dcdfa;
+  --default-input-focus: #2091F9;
   --footer-background: #252B42;
 }
 
