@@ -12,6 +12,11 @@
     font-size: var(--default-btn-text-size);
     font-weight: var(--text-regular);
     min-width: 145px;
+    transition: background-color .3s;
+}
+
+.button.default:hover, .button.video:hover {
+    background-color: var(--default-btn-hover);
 }
 
 .button.video {
@@ -19,6 +24,7 @@
     height: 188px;
     border-radius: 50%;
     background-color: var(--default-btn-color);
+    transition: background-color .3s;
 }
 
 .button.video img{

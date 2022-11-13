@@ -26,6 +26,8 @@ code {
   --default-btn-color: #2091F9;
   --default-btn-text-color: #fff;
   --default-btn-text-size: 20px;
+  --default-btn-hover: #1c7dd7;
+  --footer-background: #252B42;
 }
 
 .App {
@@ -98,4 +100,21 @@ code {
   .App {
     width: 100vw;
   }
+}
+
+/* Some behaviour for links */
+a {
+  transition: all .3s;
+}
+
+a:hover {
+  color: #42b7ff !important;
+}
+
+a img {
+  transition: transform .3s;
+}
+
+a:hover img {
+  transform: scale(1.2);
 }
